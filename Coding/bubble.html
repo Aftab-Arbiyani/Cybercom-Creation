@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function display(ar)
+            {
+                for(i=0;i<ar.length;i++)
+                {
+                    document.write(ar[i]+"<br>");
+                }
+            }
+            function sort(ar)
+            {
+                for(i=0;i<ar.length-1;i++)
+                {
+                    for(j=i+1;j<ar.length;j++)
+                    {
+                        if(ar[i]>ar[j])
+                        {
+                            var temp=ar[i];
+                            ar[i]=ar[j];
+                            ar[j]=temp;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var array=[70, 60, 80, 10, 20];
+            document.write("Before sorting"+"<br>");
+            display(array);
+            sort(array);
+            document.write("<p>After sorting<p>"+"<br>");
+            display(array);
+        </script>
+    </body>
+</html>

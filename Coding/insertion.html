@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function display(ar)
+            {
+                for(i=0;i<ar.length;i++)
+                {
+                    document.write(ar[i]+"<br>");
+                }
+            }
+            function insertion(ar)
+            {
+                var key;
+                for(i=1;i<ar.length;i++)
+                {
+                    key=ar[i];
+                    j=i-1;
+                    while(j>=0 && ar[j]>key)
+                    {
+                        ar[j+1]=ar[j];
+                        j=j-1;
+                    }
+                    ar[j+1]=key
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var array=[15, 12, 14, 16, 18]
+            document.write("before sorting:"+"<br>");
+            display(array);
+            insertion(array);
+            document.write("after sorting"+"<br>");
+            display(array);
+        </script>
+    </body>
+</html>
