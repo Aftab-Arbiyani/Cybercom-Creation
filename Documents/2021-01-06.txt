@@ -1,0 +1,17 @@
+learned to remove a file or directory fron a repository using
+git rm --cached fname,
+git clean -n
+and
+git clean -f
+
+learned about stash where we can store files related some incomplete project
+and list files in git stash and pop files from stash
+
+learned to fork a repository 
+also learned to ignore specific files by creating .gitignore file
+
+learned remote command also can add a remote for a repository 
+eg: git remote add <url>
+renaming a remote and also removing a remote
+
+Practiced javascript arrays, for loops and functions 

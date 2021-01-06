@@ -1,0 +1,35 @@
+Learned about different types of version control systems
+1)  Local Version Control System
+2)  Centralized Version Control System
+3)  Distributed Version Control System
+
+Reset command to undo any changes. 3 Types:
+
+1) soft
+2) mixed
+3) Hard
+
+
+learned about staging are where information to go in next commit is stored
+
+learned to set our own choice of editor
+
+eg: git config --global core.editor "code --wait"
+
+creating new repository: git init
+
+Cloning exixting repository 
+
+fetch command to fetch latest file from repo
+
+Creating a branh
+
+and learned to switch between different branches
+
+Commit command
+
+Merge our changes with main branch
+
+status command to check if anything is left to commit
+
+Reset
