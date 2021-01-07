@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function search(str, ar)
+            {
+                var key=Number(str);
+                for(i=0;i<ar.length;i++)
+                {
+                    if(ar[i]==key)
+                    {
+                        alert(key+" is present at position "+i);
+                    }
+                }
+                document.write("not present");
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var input=prompt("Enter number you want to search:");
+            var array=[15, 12, 13, 78, 45];
+            search(input, array);
+        </script>
+    </body>
+</html>

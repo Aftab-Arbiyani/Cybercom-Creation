@@ -1,0 +1,14 @@
+learned about git rebase which merges branches linearly.
+
+also learned revert command which is a type of undo command used to revert last commit
+
+used rm(remove) command to remove files from working directory as well as staging index
+eg: git rm filename
+    git rm --cached filename
+
+git diff command to know the differences fetween the 2 commits, changes after commiting or staging a file
+
+git cherry-pick command to commint selective file from a branch to main branch
+
+
+practiced javscript popup boxes if-else, input box, buttons
