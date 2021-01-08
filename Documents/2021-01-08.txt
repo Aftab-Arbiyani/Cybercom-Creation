@@ -1,0 +1,4 @@
+learned about html table tags, div tag, ordered lists , unordered lists, description list,
+
+javascript function, variables, operator precedence, switch statements, css attributes, like padding, flex
+
