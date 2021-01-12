@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+           
+            .cont{
+                position: relative;
+                text-align: center;  
+            }
+            img{
+                width: 500px; 
+                height: 120px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+            }
+            .Contact{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            h1{
+                font-size: 200%;
+            }
+            .input-icon i{
+                position: absolute;
+                margin-top: 10px;
+                padding-left: 580px;
+                opacity: 70%;
+            }
+            input, textarea{
+                width: 25%;
+                padding: 10px;  
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-indent: 8%;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            button{
+                padding: 10px;  
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 10%;
+                border-radius: 20px;
+                background-color: blueviolet;
+                color: white;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                border-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function calling(){
+    
+                alert("Hi");
+    
+            }
+        </script>
+        
+        <div class="cont">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSo1X_1zJdGFwGYnvXVeEKWGZT7Ph8PMrixA&usqp=CAU" alt="">
+            <h1><div class="Contact">CONTACT US</div></h1>
+        </div>
+        <form action="" onsubmit="calling()">
+            <div class="input-icon">
+             <i class="fa fa-user-o" aria-hidden="true"></i> 
+             <input type="text" placeholder="Full Name" required>
+            </div>
+            <br>
+            <div class="input-icon">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <input type="email" placeholder="Eg. example@email.com" required>
+            </div>
+            <br>
+            <div class="input-icon">
+                <i class="fa fa-mobile" aria-hidden="true" style="font-size: 150%;"></i>
+                <input type="tel" placeholder="+918451385189" pattern="[0-9]{10}" required>
+            </div>
+            <br>
+            <div class="input-icon">
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Comments"></textarea>
+            </div>
+            <br>
+            <button type="submit">SEND NOW</button>
+         </form>
+    </body>
+</html>
