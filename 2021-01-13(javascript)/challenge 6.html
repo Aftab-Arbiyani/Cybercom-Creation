@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type = "text/javascript"> 
+            function fibonacci(num) 
+            { 
+                var n=Number(num);
+                var num1=0; 
+                var num2=1; 
+                var sum; 
+                var i=0; 
+                for (i = 0; i < n; i++) 
+                { 
+                    document.write(num1+"<br>");
+                    sum=num1+num2; 
+                    num1=num2; 
+                    num2=sum; 
+                }  
+            }
+            </script>              
+    </head>
+    <body>
+        <h1>Fibonacci Series is as follows:</h1>
+        <script>
+            var input=prompt("enter a number:");
+            fibonacci(input)
+        </script>
+    </body>
+</html>
