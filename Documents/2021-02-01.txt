@@ -1,0 +1,5 @@
+Today I learned about basics about PHP.
+Like PHP syntax, structure, errorreporting,
+also string methods, functions, print output in php 
+like print, echo print_r, embedding php inside html.
+Also variables in php.
