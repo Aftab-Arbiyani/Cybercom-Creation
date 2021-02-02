@@ -1,0 +1,2 @@
+today i learned a little more about php string methods, arrays, multidimensional arrays also learned how to access it.
+Timestamps basics also random number generation, output buffering. also learned include and require 
