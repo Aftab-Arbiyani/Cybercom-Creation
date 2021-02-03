@@ -1,0 +1,3 @@
+Learned how to set cookies, how to start a session and end a session.
+Learned various file handling methods like file opening, read, write, append, explode method.
+How to rename a file or upload a file.
