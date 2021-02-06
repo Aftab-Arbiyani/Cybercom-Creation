@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            .nav {
+                height: 100%;
+                width: 240px;
+                position: fixed;
+                overflow: hidden;
+                padding-top: 10px;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-color: de792b;
+            }
+            .nav a{
+                padding: 6px 8px 6px 25px;
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function birthday(){
+                var array=localStorage.getItem('array');
+                var items=JSON.parse(array);
+                array=items;
+                var d=new Date();
+                console.log('jgbdcxjnm');
+                for(var k=0;k<array.length;k++){
+                    var dt=new Date(array[k].birthdate);
+                    console.log('jgbdcxjnm');
+                    if(dt.getMonth() == d.getMonth()+1 && dt.getDay() == d.getDay()){
+                        document.getElementById('head').innerHTML="Today is "+array[k].name + "\'s Birthday"
+                    }
+                    else{
+                        document.getElementById('head').innerHTML="Good Morning";
+                    }
+                }
+            }
+        </script>
+        <div class="nav">
+            <p style="padding-left: 25px; color: white;" id="para">Hello</p><br><br><br>
+            <a href="Sub-User.html">Dashboard</a><br>
+            <a href="Login1.html">Logout</a>
+        </div>
+        <h2 style= "margin-left: 270px;" id="head"> </h2>
+        <script>birthday();</script>
+    </body>
+</html>

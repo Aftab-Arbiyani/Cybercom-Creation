@@ -57,10 +57,17 @@
                         document.getElementById('adult').innerHTML= count3 +' Users';
                     }
                 }
+                
             }
-            /*function birthday(){
+            function birthday(){
+                var array=localStorage.getItem('array');
+                var items=JSON.parse(array);
+                array=items;
+                var d=new Date();
                 for(var k=0;k<array.length;k++){
-                    if(array[k].birthdate == new Date()){
+                    var dt=new Date(array[k].birthdate)
+                    
+                    if((dt.getMonth() == d.getMonth()+1) && (dt.getDay() == d.getDay())){
                         document.getElementById('birthdate').innerHTML="Today is "+array[k].name + "\'s Birthday"
                     }
                     else{
@@ -72,13 +79,14 @@
                 var admin=localStorage.getItem('admin');
                 var items1=JSON.parse(admin);
                 admin=items1;
-                document.getElementById('para').innerHTML="Hello, " + admin[0].name;
-            }*/
+                var str=admin[0].name;
+                document.getElementById('para').innerHTML='Hello '+str;
+            }
         </script>
         <div class="nav">
-            <p style="padding-left: 25px; color: white;" >Hello</p><br><br><br>
+            <p style="padding-left: 25px; color: white;" id="para">Hello</p><br><br><br>
             <a href="Dashboard.html">Dashboard</a><br>
-            <a href="Users.html">Users</a><br>
+            <a href="User.html">Users</a><br>
             <a href="UserSession.html">Login Session</a><br>
             <a href="Login1.html">Logout</a>
         </div>
@@ -98,5 +106,6 @@
             </div>
         </div>
         <h3 style="text-align: center; padding-left: 20px; position: relative;" id="birthdate">Today is "ABC's" Birthday</h3>
+        <script>Name(); birthday();</script>
     </body>
 </html>

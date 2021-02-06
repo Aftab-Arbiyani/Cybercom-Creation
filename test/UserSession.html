@@ -34,17 +34,26 @@
     </head>
     <body>
         <script src="session.js"></script>
+        <script>
+            function Name(){
+                console.log('kdfbkcjn');
+                var admin=localStorage.getItem('admin');
+                var items1=JSON.parse(admin);
+                admin=items1;
+                var str=admin[0].name;
+                document.getElementById('para').innerHTML='Hello '+str;
+            }
+        </script>
         <div class="nav">
             <p style="padding-left: 25px; color: white;" id="para">Hello</p><br><br><br>
             <h3 style="padding-left: 270px;">Dashboard</h3>
             <a href="Dashboard.html">Dashboard</a><br>
-            <a href="Users.html">Users</a><br>
+            <a href="User.html">Users</a><br>
             <a href="UserSession.html">Login Session</a><br>
             <a href="Login1.html">Logout</a>
         </div>
         <h3 style="padding-left: 270px; ">User Session Logs</h3><br>
-            <script src="session_info.js">
-                
-            </script>
+            <script src="session_info.js"></script>
+            <script>Name();</script>
     </body>
 </html>

@@ -46,43 +46,20 @@
         <h3 >LOGIN</h3>
         <br>
         <fieldset>
-            <script>
-                function check(){
-                    var admin=localStorage.getItem('admin');
-                    var items = JSON.parse(admin);
-		            admin = items;
-                    var array = localStorage.getItem('array');
-		            var items1 = JSON.parse(array);
-		            array = items1;
-                    var email=document.getElementById('email').value;
-                    var pass=document.getElementById('password').value
-                    if(admin[0].mail === email && admin[0].pass === pass){
-                        window.open("Dashboard.html", "_self");
-                        //return true;
-                    }
-                    else{
-                        /*var array = localStorage.getItem('array');
-		                var items1 = JSON.parse(array);
-		                array = items1;*/
-                        for(var k=0;k<array.length;k++){
-                            //console.log('123559');
-                        if(array[k].email == email && array[k].password == pass){
-                            console.log('5689');
-                            window.open("Sub-User.html", "_self");
-                            //return true;
-                        }
-                    }
-                    }
-                }
-            </script>
         <form action="Registration.html" target="_self" method="POST">
             <br>
             <input type="email" placeholder="Email" required><br>
             <input type="password" placeholder="Password" required><br>
-            <input type="submit" value="LOGIN"  style="background-color: fca311;" onclick="check()">
+            <input type="submit" value="LOGIN"  style="background-color: fca311;" onclick="myfun()">
             <p style="text-align: center;">OR</p>
             <input type="submit" value="REGISTER NOW" style="background-color: fca311;">
         </form>
+        <script type="text/javascript">
+            function myfun(){
+
+                window.open("Dashboard.html");
+            }
+        </script>
     </fieldset>
 
     

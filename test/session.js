@@ -4,8 +4,7 @@ function Sess(){
     var log=[];
     var login={
         email: email,
-        loginTime: d,
-        logoutTime
+        loginTime: d
     }
     if(localStorage.getItem('log'))
 	{

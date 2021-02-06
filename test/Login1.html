@@ -56,7 +56,7 @@
                     var email=document.getElementById('email').value;
                     var pass=document.getElementById('password').value
                     if(admin[0].mail === email && admin[0].pass === pass){
-                        window.open("Dashboard.html", "_self");
+                        window.open("Dashboard.html");
                         //return true;
                     }
                     else{
@@ -66,15 +66,16 @@
                         for(var k=0;k<array.length;k++){
                             //console.log('123559');
                         if(array[k].email == email && array[k].password == pass){
-                            console.log('5689');
-                            window.open("Sub-User.html", "_self");
+                            //console.log('5689');
+                            window.open("Sub-User.html");
                             //return true;
                         }
                     }
                     }
                 }
             </script>
-        <form action="" target="_self" method="POST">
+            <script src="session.js"></script>
+        <form action="" target="_self" method="POST" onsubmit="Sess()">
             <br>
             <input type="email" placeholder="Email" id="email" required><br>
             <input type="password" placeholder="Password" id="password" required><br>
