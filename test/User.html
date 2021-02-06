@@ -69,16 +69,6 @@
 
                 array.push(person);
                 localStorage.setItem("array", JSON.stringify(array));
-              /*
-                var regnm='/^[a-zA-z] {3, 20}$/';
-                var regmail='/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
-                if((parseInt(name) != name) && regmail.test(mail)){
-                    alert("enter valid name or email");
-                }
-                else if(pass.length<6){
-                    alert("minimum length of password is 6");
-                }
-                */
             }
         </script>
     </head>
@@ -91,7 +81,7 @@
             <a href="">Logout</a>
         </div>
         <h3 style="padding-left: 270px;">Add User</h3><br><br>
-        <form action="">
+        <form action="" onsubmit="return validation()">
             <input type="text" placeholder="Name" id="name">&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="email" placeholder="Email" id="email">&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="password" placeholder="Password" id="pass">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -99,11 +89,8 @@
             <input type="submit" value="Add User" style="float: right; background-color: fca311;" onclick="addData()">
         </form>
         <h3 style="padding-left: 270px; ">User List</h3><br>
-
-	<script type="text/javascript" src="Users.js">
-
-		
-	</script>
+    <script src="validation.js"></script>
+	<script type="text/javascript" src="Users.js"></script>
 
 </body>
 </html>
