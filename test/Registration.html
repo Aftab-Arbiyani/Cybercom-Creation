@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            input, select, label{
+                padding: 10px;
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;   
+            }
+            label{
+               text-align: center;
+            }
+            body{
+                border: 1px solid black;
+                margin-top: 100px;
+                margin-bottom: 120px;
+                margin-left: 500px;
+                margin-right: 500px;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <script>
+            function add(){
+    var admin=[];
+    var name=document.getElementById('name').value;
+    var mail=document.getElementById('email').value;
+    var pass=document.getElementById('one').value;
+    var cred={
+        name: name,
+        mail:mail,
+        pass: pass
+    }
+    /*var arr=localStorage.getItem('admin');
+    var item=JSON.parse(arr);
+    arr=item;*/
+
+    if(localStorage.getItem('admin') !=null){
+        alert("Admin already exists ");
+        return false;
+    }
+
+    if(localStorage.getItem('admin'))
+    {
+        admin = JSON.parse(localStorage.getItem('admin'));
+    }
+
+    admin.push(cred);
+    localStorage.setItem("admin", JSON.stringify(admin));
+    //document.write(localStorage);
+}   
+     
+        </script>
+        <form action="Login1.html" method="POST" onsubmit="return validate()">
+        <h2 style="text-align: center;">Registration</h2>
+        <input type="text" placeholder="Name" id="name" required><br>
+        <input type="email" placeholder="Email" id="email" required><br>
+        <input id="one" type="password" placeholder="Password" required><br>
+        <input id="two" type="password" placeholder="Confirm Password" required><br>
+        <select required>
+            <option value="0">Select City</option>
+            <option value="1">Ahmedabad</option>
+            <option value="2">Anand</option>
+            <option value="3">Bengaluru</option>
+            <option value="4">Bhavnagar</option>
+            <option value="5">Rajkot</option>
+        </select><br>
+        <select required>
+            <option value="0">Select State</option>
+            <option value="1">Gujarat</option>
+            <option value="2">Kerala</option>
+            <option value="3">Karnataka</option>
+            <option value="4">Mahrashtra</option>
+        </select><br>
+        <input type="checkbox" required><label>Terms & Conditions</label><br>
+        <input type="submit" value="Register" style="border-radius: 10px; background-color: fca311;" onclick=" return add()" >
+        </form>
+        
+        <script type="text/javascript">
+            function validate(){
+                var pass1=document.getElementById('one').value;
+                var pass2=document.getElementById('two').value;
+                if(pass1 !== pass2){
+                    alert("Passwords do not match");
+                    return false;
+                }
+            }
+            
+        </script>
+</html>
