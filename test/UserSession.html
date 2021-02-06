@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            .nav {
+                height: 100%;
+                width: 240px;
+                position: fixed;
+                overflow: hidden;
+                padding-top: 10px;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-color: de792b;
+            }
+            .nav a{
+                padding: 6px 8px 6px 25px;
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+            table, tr, td{
+                border-collapse: collapse;
+                border: 1px solid black;
+                margin-left:300px;
+                padding: 10px;
+            }
+            th{
+                border: 1px solid black;
+                background-color: black;   
+                color: white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="session.js"></script>
+        <div class="nav">
+            <p style="padding-left: 25px; color: white;" id="para">Hello</p><br><br><br>
+            <h3 style="padding-left: 270px;">Dashboard</h3>
+            <a href="Dashboard.html">Dashboard</a><br>
+            <a href="Users.html">Users</a><br>
+            <a href="UserSession.html">Login Session</a><br>
+            <a href="Login1.html">Logout</a>
+        </div>
+        <h3 style="padding-left: 270px; ">User Session Logs</h3><br>
+            <script src="session_info.js">
+                
+            </script>
+    </body>
+</html>
