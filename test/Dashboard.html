@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <style>
+            .nav {
+                height: 100%;
+                width: 240px;
+                position: fixed;
+                overflow: hidden;
+                padding-top: 10px;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-color: de792b;
+            }
+            .nav a{
+                padding: 6px 8px 6px 25px;
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+            .one{
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .two{
+                width: 15%;
+                padding-left: 10px;
+                text-align: center;
+                border: 1px solid black;
+            }
+            p{
+                text-decoration: solid;
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+    <body onload="count()" >
+        <script>
+            function count(){
+                var array=localStorage.getItem('array');
+                var items=JSON.parse(array);
+                array=items;
+                var count1=0;
+                var count2=0;
+                var count3=0;
+                for(var k=0;k<array.length;k++){
+                    if(array[k].age<18){
+                        count1++;
+                        document.getElementById('teen').innerHTML= count1 + ' Users';
+                    }
+                    else if(array[k].age>18 && array[k].age<50){
+                        count2++;
+                        document.getElementById('mid').innerHTML= count2 + ' Users';
+                    }
+                    else{
+                        count3++;
+                        document.getElementById('adult').innerHTML= count3 +' Users';
+                    }
+                }
+            }
+            /*function birthday(){
+                for(var k=0;k<array.length;k++){
+                    if(array[k].birthdate == new Date()){
+                        document.getElementById('birthdate').innerHTML="Today is "+array[k].name + "\'s Birthday"
+                    }
+                    else{
+                        document.getElementById('birthdate').innerHTML="Good Morning";
+                    }
+                }
+            }
+            function Name(){
+                var admin=localStorage.getItem('admin');
+                var items1=JSON.parse(admin);
+                admin=items1;
+                document.getElementById('para').innerHTML="Hello, " + admin[0].name;
+            }*/
+        </script>
+        <div class="nav">
+            <p style="padding-left: 25px; color: white;" >Hello</p><br><br><br>
+            <a href="Dashboard.html">Dashboard</a><br>
+            <a href="Users.html">Users</a><br>
+            <a href="UserSession.html">Login Session</a><br>
+            <a href="Login1.html">Logout</a>
+        </div>
+        <h3 style="padding-left: 270px;">Dashboard</h3>
+        <div class="one">
+            <div class="two" style="background-color: fec89a; margin-left: 300px;">
+               <h4>User &lt; 18</h4> 
+               <p id="teen">Users</p>
+            </div>
+            <div class="two" style="background-color: bdb2ff; margin-left: 100px;">
+                <h4>18-50 Years Users</h4>
+                <p id='mid'>Users</p>
+            </div>
+            <div class="two" style="background-color: ffadad; margin-left: 100px;">
+                <h4>Users &gt; 50 Years</h4>
+                <p id="adult">Users</p>
+            </div>
+        </div>
+        <h3 style="text-align: center; padding-left: 20px; position: relative;" id="birthdate">Today is "ABC's" Birthday</h3>
+    </body>
+</html>
