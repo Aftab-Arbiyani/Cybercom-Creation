@@ -1,0 +1,3 @@
+learned about connecting sql databases to php file
+learned types of joins (i.e. left join, right join, full outer join)
+SQL select, update, insert statements.
