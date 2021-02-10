@@ -1,0 +1,38 @@
+fieldset{
+    border: 1px solid white;
+    width: 30%;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+input{
+    padding: 10px;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.one{
+    
+    margin-top: 200px;
+    padding: 12% 15%;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+h3{
+    text-align: center;
+    display: block;
+    padding: 7px;
+}
+body{
+    border: 1px solid black;
+    margin-left: 450px;
+    margin-right: 450px;
+    margin-top:200px;
+    margin-bottom: 180px;
+}
+input[type=submit]{
+    width:40%;
+}
